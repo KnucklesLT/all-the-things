@@ -3,12 +3,25 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import LuigisThings from './pages/LuigisThings/LuigisThings'
+import MichaelJordanThings from './pages/MichaelJordanThings/MichaelJordanThings'
 import Landing from './pages/Landing/Landing'
 import AndrewsThings from './components/AndrewsThings/AndrewsThings'
 import FitnessThings from './pages/FitnessThings/FitnessThings'
 import WackyThings from './components/WackyThings/WackyThings'
 
 const App = () => {
+  const michaelJordansThings = [
+    {
+      name: 'basketball',
+      image: "https://csq.com/wp-content/uploads/2017/08/Michael-Jordan-Slam-Dunk-172.jpeg",
+      attributes: [
+        'rich', 
+        'famous',
+        'talented',
+        'gambler'
+      ]
+    }
+  ]
   const bensThings = [
     {
       name: 'banana',
@@ -102,6 +115,10 @@ const App = () => {
     <Routes>
       {/* All the <Route> components should live here */}
       <Route path="/" element={<Landing />} />
+      <Route 
+        path='/the-michael-jordan'
+        element={<MichaelJordanThings things={michaelJordansThings} />}
+      />
       <Route
         path="/the-manliest-things"
         element={<ManliestThings things={bensThings} />}
