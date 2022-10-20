@@ -4,6 +4,7 @@ import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import LuigisThings from './pages/LuigisThings/LuigisThings'
 import Landing from './pages/Landing/Landing'
+import FitnessThings from './pages/FitnessThings/FitnessThings'
 
 const App = () => {
   const bensThings = [
@@ -70,6 +71,14 @@ const App = () => {
       attributes: ["relaxing", 'mesmerizing', 'enrapturing']
     }
   ]
+  
+  const gregsThings = [
+    {
+      name: "fitness",
+      image: "https://imgs.xkcd.com/comics/health_drink_2x.png",  
+      attributes: ["refreshing", "fun", "exciting"],
+    },
+  ]
 
   return (
     <Routes>
@@ -90,6 +99,10 @@ const App = () => {
       <Route
         path="/the-luigis-things"
         element={<LuigisThings things={luigisThings} />}
+      />
+      <Route
+        path="/the-fitness-things"
+        element={<FitnessThings things={gregsThings} />}
       />
     </Routes>
   )
