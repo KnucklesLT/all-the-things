@@ -6,6 +6,7 @@ import LuigisThings from './pages/LuigisThings/LuigisThings'
 import Landing from './pages/Landing/Landing'
 import AndrewsThings from './components/AndrewsThings/AndrewsThings'
 import FitnessThings from './pages/FitnessThings/FitnessThings'
+import WackyThings from './components/WackyThings/WackyThings'
 
 const App = () => {
   const bensThings = [
@@ -89,6 +90,14 @@ const App = () => {
     },
   ]
 
+  const wackyThings = [
+    {
+      name: "nectar",
+      image: "https://upload.wikimedia.org/wikipedia/commons/2/21/Nectar.jpg",  
+      attributes: ["sweet", "flowers", "massive bees", "earl"],
+    },
+  ]
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -116,6 +125,10 @@ const App = () => {
       <Route
         path="/the-andrew-things"
         element={<AndrewsThings things={andrewsThings} />}
+      />
+      <Route
+        path="/the-wacky-things"
+        element={<WackyThings things={wackyThings} />}
       />
     </Routes>
   )
