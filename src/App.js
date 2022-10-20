@@ -4,6 +4,7 @@ import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import LuigisThings from './pages/LuigisThings/LuigisThings'
 import Landing from './pages/Landing/Landing'
+import AndrewsThings from './components/AndrewsThings/AndrewsThings'
 import FitnessThings from './pages/FitnessThings/FitnessThings'
 
 const App = () => {
@@ -80,6 +81,14 @@ const App = () => {
     },
   ]
 
+  const andrewsThings = [
+    {
+      name: "speakers",
+      image: "http://meniscus.lightningbasehosted.com/wp-content/uploads/2017/04/Classix-2.5-Pair.jpg",  
+      attributes: ["big soundstage", "audiophile quality", "massive bass", "soaring highs"],
+    },
+  ]
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -97,12 +106,16 @@ const App = () => {
         element={<SillyThings things={huntersThings} />}
       />
       <Route
+        path="/the-fitness-things"
+        element={<FitnessThings things={gregsThings} />}
+      />
+      <Route
         path="/the-luigis-things"
         element={<LuigisThings things={luigisThings} />}
       />
       <Route
-        path="/the-fitness-things"
-        element={<FitnessThings things={gregsThings} />}
+        path="/the-andrew-things"
+        element={<AndrewsThings things={andrewsThings} />}
       />
     </Routes>
   )
