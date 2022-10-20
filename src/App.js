@@ -5,6 +5,7 @@ import SillyThings from './pages/SillyThings/SIllyThings'
 import LuigisThings from './pages/LuigisThings/LuigisThings'
 import Landing from './pages/Landing/Landing'
 import AndrewsThings from './components/AndrewsThings/AndrewsThings'
+import AlcoholThings from './pages/AlcoholThings/AlcoholThings'
 import FitnessThings from './pages/FitnessThings/FitnessThings'
 
 const App = () => {
@@ -81,6 +82,14 @@ const App = () => {
     },
   ]
 
+  const bojacksThings = [
+    {
+      name: "alcohol",
+      image: "https://imgs.xkcd.com/comics/health_drink_2x.png",  
+      attributes: ["drunk", "black-out", "get some help"],
+    },
+  ]
+
   const andrewsThings = [
     {
       name: "speakers",
@@ -108,6 +117,10 @@ const App = () => {
       <Route
         path="/the-fitness-things"
         element={<FitnessThings things={gregsThings} />}
+      />
+      <Route
+        path="/the-alcohol-things"
+        element={<AlcoholThings things={bojacksThings} />}
       />
       <Route
         path="/the-luigis-things"
